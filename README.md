@@ -1,4 +1,16 @@
-<!-- YouTube Clone -->
+#YouTube Clone
+
+Head 
+Body
+    Sidebar
+        MenuItems
+
+    MainContainer
+        ButtonList
+        VideoContainer
+        VideoCard
+
+
 
 <!-- 
 
