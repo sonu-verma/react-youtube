@@ -1,10 +1,12 @@
+import FilterButton from "./FilterButton"
+
 const VideoFilter = () => {
     return <>
-        <div className="flex gap-4 m-4">
-            <span className="px-8 border-2 border-black">All</span>
-            <span className="px-8 border-2 border-black">All</span>
-            <span className="px-8 border-2 border-black">All</span>
-            <span className="px-8 border-2 border-black">All</span>
+        <div className="flex gap-2 m-2">
+            <FilterButton name="All" />
+            <FilterButton name="Trending" />
+            <FilterButton name="Cricket" />
+            <FilterButton name="News" />
         </div>
     </>
 }

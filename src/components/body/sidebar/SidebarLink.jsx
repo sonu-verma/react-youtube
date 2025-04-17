@@ -4,11 +4,13 @@ import Menu from "./Menu"
 const SidebarLink = () => {
 
     const isSidebarActive = useSelector(store => store.app.isSidebarOpen)
+    
+    console.log("isSidebarActive", isSidebarActive)
 
     return <>
 
         {
-            isSidebarActive && 
+            isSidebarActive &&
             <div className="sidebar-link decoration-none">
                 <ul className="p-2 m-2">
                     <Menu menuName="" src="home.svg" />    

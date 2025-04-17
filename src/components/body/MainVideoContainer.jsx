@@ -3,7 +3,7 @@ import VideoContainer from './videocontainer/VideoContainer'
 
 const MainVideoContainer = () => {
   return <>
-    <div className='bg-amber-600 basis-full'>
+    <div className='basis-full mt-5'>
       <VideoContainer />
     </div>
   </>

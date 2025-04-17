@@ -1,4 +1,4 @@
-#YouTube Clone
+# YouTube Clone
 
 
 ## Components Overview
@@ -33,8 +33,13 @@
    git clone https://github.com/yourusername/youtube-clone.git
    cd youtube-clone
 
+2. **Run Project:**
+    npm install
+    npm run dev    
 
-
+##
+- **Added Store for app setting**
+- **Routing**
 
 <!-- 
 

@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const appSlice = createSlice({
     name: "app",
     initialState: {
-        isSidebarOpen: false,
+        isSidebarOpen: window.innerWidth <= 768 ? true : false,
     },
     reducers: {
         toggleSiderbar: (state) => {
