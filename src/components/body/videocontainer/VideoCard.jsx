@@ -6,7 +6,7 @@ const VideoCard = ({ info }) => {
   // console.log(info);
   return (
     <div className='h-[320px] w-[390px] bg-gray-200 border border-gray-300 rounded-lg shadow-md p-2 m-4 box-border'>
-        <img src={snippet?.thumbnails?.medium?.url} alt="thumbnail" className='rounded-lg w-full' />
+        <img src={snippet?.thumbnails?.medium?.url} alt="thumbnail" className='rounded-lg h-52 w-full mb-1' />
         
         <div className=''>
             <div className='flex items-center gap-4'>

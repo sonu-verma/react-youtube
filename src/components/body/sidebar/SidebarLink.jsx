@@ -25,13 +25,13 @@ const SidebarLink = () => {
             !isSidebarActive && 
             <div className="sidebar-link decoration-none">
                 <ul className="p-2 m-2">
-                    <Menu menuName="Home" src="home.svg" />    
-                    <Menu menuName="Subscriptions" src="subscriptions.svg" />    
+                    <Menu menuName="Home" src="home.svg" route="/" />    
+                    <Menu menuName="Subscriptions" src="subscriptions.svg"  route="/subscriptions"/>    
                 </ul>
                 <hr className="text-gray-400"/>
                 <ul className="p-2 m-2">
                     <h1 className="text-xl font-bold">Explore</h1>
-                    <Menu menuName="Trending" src="trending.svg" />    
+                    <Menu menuName="Trending" src="trending.svg"  route="/trending" />    
                     <Menu menuName="Shopping" src="shop.svg" />      
                     <Menu menuName="Live" src="home.svg" />    
                 </ul>

@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   const isSidebarOpen = useSelector(store => store.app.isSidebarOpen);  
   return (
-    <div className={`${isSidebarOpen ? 'basis-50': 'basis-70'} h-screen`}>
+    <div className={`${isSidebarOpen ? 'basis-15': 'basis-60'} h-screen`}>
         <SidebarLink />
     </div>
   )

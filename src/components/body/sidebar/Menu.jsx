@@ -1,9 +1,11 @@
-const Menu = ({menuName, src}) => {
+import { Link } from "react-router-dom";
+
+const Menu = ({menuName, src, route = "/"}) => {
     return (
-            <li className="flex gap-6 my-4">
+            <Link to={route}><li className="flex gap-6 my-4">
                 <img src={`../../../../assets/${src}`} alt="Icon" />
                 {menuName && <span>{menuName}</span> }
-            </li>
+            </li></Link>
     );
 }
 

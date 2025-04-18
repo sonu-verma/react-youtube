@@ -1,6 +1,10 @@
- const YOUTUBE_API_KEY = "AIzaSyA-OyJkiWDYDq79_pILPVkr0biGMQQhYeE";
+ const YOUTUBE_API_KEY = "AIzaSyCBdza2haaS7A6-oc0xscJtjNutDP-QBME";
 
 export const YOUTUBE_SEARCH_API_URL = `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&part=snippet,id&order=date&maxResults=10&q=`;
+
+export const YOUTUBE_VIDEOS_API_KEY = `https://www.googleapis.com/youtube/v3/videos?key=${YOUTUBE_API_KEY}&part=snippet&chart=mostPopular&maxResults=50`;
+
+export const YOUTUBE_VIDEO_API_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${YOUTUBE_API_KEY}&id=`;
 
 export const getTimeAgo = (dateString) =>  {
     const contentDate = new Date(dateString);

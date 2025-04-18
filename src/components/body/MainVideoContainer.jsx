@@ -3,7 +3,7 @@ import VideoContainer from './videocontainer/VideoContainer'
 
 const MainVideoContainer = () => {
   return <>
-    <div className='basis-full mt-5'>
+    <div className='basis-full mt-1'>
       <VideoContainer />
     </div>
   </>
