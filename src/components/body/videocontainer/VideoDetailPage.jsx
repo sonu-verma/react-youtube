@@ -3,20 +3,20 @@ import { YOUTUBE_SEARCH_API_URL, YOUTUBE_VIDEO_API_URL } from '../../../utils/co
 import { useSearchParams } from 'react-router-dom';
 import VideoFilter from './VideoFilter';
 import VideoDetailPageCard from './VideoDetailPageCard';
-
+import { videoData } from '../../../utils/videoData';
 const VideoDetailPage = ({videoId}) => {
     const [video, setVideo] = useState(null);
     const [searchParams] = useSearchParams();
     const videoIdFromUrl = searchParams.get('v');
-    console.log(videoIdFromUrl);
+    // console.log(videoIdFromUrl);
 
     useEffect(()=> {
         const fetchData = async () => {
-            console.log("videoId", YOUTUBE_VIDEO_API_URL+videoIdFromUrl);
+            // console.log("videoId", YOUTUBE_VIDEO_API_URL+videoIdFromUrl);
             const response = await fetch(YOUTUBE_VIDEO_API_URL+videoIdFromUrl)
             const data = await response.json()
             setVideo(data.items[0])
-            console.log(data.items[0])
+            // console.log(data.items[0])
         }
         fetchData()
     },[videoId]);
@@ -30,14 +30,15 @@ const VideoDetailPage = ({videoId}) => {
             const res = await fetch(`${YOUTUBE_SEARCH_API_URL}`);
             const json = await res.json();
             if(json?.error?.code == 403){ 
-                setVideos(json.items)
+                console.log("403 error", videoData.items)
+                setVideos(videoData.items)
                 return;
             }
             setVideos(json.items || []);
             } catch (err) {
-            console.error(err);
+                console.error(err);
             } finally {
-            console.log("finally block executed");
+                console.log("finally block executed");
             }
         };
 
@@ -46,7 +47,7 @@ const VideoDetailPage = ({videoId}) => {
 
     return (
         <div className='p-2 m-4 box-border grid grid-flow-col'>
-            <div class="basis-80">
+            <div className="basis-80">
                 <div className='rounded-full'>
                     <iframe 
                     className='rounded-lg'

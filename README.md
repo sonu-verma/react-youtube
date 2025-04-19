@@ -40,6 +40,9 @@
 ##
 - **Added Store for app setting**
 - **Routing**
+- **De - bouncing**
+- **used cache to store search result**
+- **LRU Cache - Learn**
 
 <!-- 
 
