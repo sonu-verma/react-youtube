@@ -42,8 +42,11 @@
 - **Routing**
 - **De - bouncing**
 - **used cache to store search result**
+- **Chat Feature**
 - **LRU Cache - Learn**
 
+
+## Name Icon Generator - https://ui-avatars.com/api/?name=Sonu%20verma
 <!-- 
 
 Head - Done

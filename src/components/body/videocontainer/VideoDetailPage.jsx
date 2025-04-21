@@ -5,6 +5,7 @@ import VideoFilter from './VideoFilter';
 import VideoDetailPageCard from './VideoDetailPageCard';
 import { videoData } from '../../../utils/videoData';
 import Comment from './Comment';
+import LiveChat from '../chat/LiveChat';
 const VideoDetailPage = ({videoId}) => {
     const [video, setVideo] = useState(null);
     const [searchParams] = useSearchParams();
@@ -257,7 +258,7 @@ const VideoDetailPage = ({videoId}) => {
                     className='rounded-lg'
                     width="900" 
                     height="500" 
-                    src={`https://www.youtube.com/embed/${video?.id}?si=XEAkJ9bmE6P9Zp5P`} 
+                    src={`https://www.youtube.com/embed/${videoIdFromUrl}?si=XEAkJ9bmE6P9Zp5P`} 
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -282,7 +283,8 @@ const VideoDetailPage = ({videoId}) => {
                     {renderComments(commentsData)}
                 </div>
             </div>
-            <div>
+            <div className=''>
+                <LiveChat />
                 <div>
                     <VideoFilter />
                     {
