@@ -21,3 +21,14 @@ export function getRandomDescription(wordCount) {
 export function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+
+ export const sum = (num) => {
+        console.log("sum function called")
+        let total = 0;
+        for (let i = 0; i < num; i++) {
+            total += i;
+        }
+        return total;
+    }

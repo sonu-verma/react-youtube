@@ -7,6 +7,7 @@ import MainVideoContainer from "./components/body/MainVideoContainer"
 import VideoDetailPage from "./components/body/videocontainer/VideoDetailPage"
 import ErrorPage from "./components/ErrorPage"
 import Trending from "./components/body/trending/Trending"
+import UseMemo from "./components/hooks/UseMemo"
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
           }, {
             path: "/trending",
             element: <Trending />
+          },{
+            path: "/hooks",
+            element: <UseMemo />
           }
         ],
         errorElement: <ErrorPage />
